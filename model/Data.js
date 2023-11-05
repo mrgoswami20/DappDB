@@ -1,6 +1,11 @@
 const mongoose=require('mongoose')
 
 const dataSchema=new mongoose.Schema({
+    
+    patient:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'User'
+    },
     age:{
         type:Number,
         require:true
@@ -16,3 +21,6 @@ const dataSchema=new mongoose.Schema({
         require:true
     }
 })
+
+const Data=mongoose.model("Data",dataSchema)
+module.exports=Data

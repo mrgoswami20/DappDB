@@ -4,8 +4,7 @@ const userSchema=new mongoose.Schema({
     address:{
         type:String,
         default:true
-    },
-    patientData:{
-        id:
     }
 })
+const User=mongoose.model("User",userSchema)
+module.exports=User
