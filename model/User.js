@@ -3,7 +3,11 @@ const mongoose=require('mongoose')
 const userSchema=new mongoose.Schema({
     address:{
         type:String,
-        default:true
+        require:true
+    },
+    isAdmin:{
+        type:Boolean,
+        default:false
     }
 })
 const User=mongoose.model("User",userSchema)
